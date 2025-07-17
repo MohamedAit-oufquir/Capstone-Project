@@ -21,8 +21,8 @@ const Header1 = () => {
                 <Stack direction={"row"} alignItems={"center"}>
                     <Typography
                         sx={{
-                            mr: 2,
-                            p: "4px 10px",
+                            mr: 3,
+                            p: "3px 10px",
                             bgcolor: "#D23F57",
                             borderRadius: "12px",
                             fontSize: "12px",
@@ -83,11 +83,11 @@ const Header1 = () => {
                             </IconButton>
                         )}
                     </div>
-           
-           
-           
-           
-           
+
+
+
+
+
                 </Box>
                 )
 }
