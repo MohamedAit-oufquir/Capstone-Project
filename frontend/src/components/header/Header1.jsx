@@ -8,12 +8,13 @@ const Header1 = () => {
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
 
-    return (
-        <Box sx= {(
-
-            bgcolor:"#2B3445
-
-        )}>
+   return (
+    <Box sx={{
+        bgcolor: "#2B3445",
+        py: "4px",
+        borderBottomRightRadius: 4,
+        borderBottomLeftRadius: 4,
+      }}
 
 
 
