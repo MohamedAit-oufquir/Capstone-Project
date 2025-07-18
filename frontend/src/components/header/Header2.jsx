@@ -59,6 +59,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 
 }));
+const options = ["All Categories", "CAR", "Clothes", "Electronics"];
+
+const Header2 = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const open = Boolean(anchorEl);
+  const handleClickListItem = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 export default Header2;
 
 
