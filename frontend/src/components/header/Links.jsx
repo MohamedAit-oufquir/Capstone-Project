@@ -1,17 +1,11 @@
 import { ExpandMore, KeyboardArrowRightOutlined } from "@mui/icons-material";
 import { Box, Paper, Typography } from "@mui/material";
-import { ExpandMore, KeyboardArrowRightOutlined } from "@mui/icons-material";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 
-import { Box, Paper, Typography } from "@mui/material";
-import React from 'react'
-
-export default function Links() {
-    return (
-        <div>Links</div>
-    )
-}
-
-
+// eslint-disable-next-line react/prop-types
 const Links = ({ title }) => {
     return (
         <Box
@@ -39,71 +33,167 @@ const Links = ({ title }) => {
                     transform: " translateX(-50%)",
                     display: "none",
                     zIndex: 2,
-                }},
-
-        >
-            <Paper sx={{ mt: 2 }} className=" ">
-                <nav aria-label="secondary mailbox folders">
-                    <List>
-                        <ListItem disablePadding>
-                            <ListItemButton
-                                sx={{
-                                    display: "flex",
-                                    p: 0,
-                                    px: 1.5,
-                                }}
-                            >
-                                <ListItemText
+                }}
+            >
+                <Paper sx={{ mt: 2 }} className=" ">
+                    <nav aria-label="secondary mailbox folders">
+                        <List>
+                            <ListItem disablePadding>
+                                <ListItemButton
                                     sx={{
-                                        "& .MuiTypography-root": {
-                                            fontSize: "15px",
-                                            fontWeight: 300,
-                                        },
+                                        display: "flex",
+                                        p: 0,
+                                        px: 1.5,
                                     }}
-                                    primary="Dashboard"
-                                />
-                                <Box flexGrow={1} />
-                            </ListItemButton>
-                        </ListItem>
+                                >
+                                    <ListItemText
+                                        sx={{
+                                            "& .MuiTypography-root": {
+                                                fontSize: "15px",
+                                                fontWeight: 300,
+                                            },
+                                        }}
+                                        primary="Dashboard"
+                                    />
+                                    <Box flexGrow={1} />
+                                </ListItemButton>
+                            </ListItem>
 
-                        <ListItem
-                            sx={{
-                                ":hover .sub-link": { display: "block" },
-                                position: "relative",
-                            }}
-                            disablePadding
-                        >
-                            <ListItemButton
+                            <ListItem
                                 sx={{
-                                    display: "flex",
-                                    p: 0,
-                                    px: 1.5,
+                                    ":hover .sub-link": { display: "block" },
+                                    position: "relative",
                                 }}
+                                disablePadding
                             >
-                                <ListItemText
+                                <ListItemButton
                                     sx={{
-                                        "& .MuiTypography-root": {
-                                            fontSize: "15px",
-                                            fontWeight: 300,
-                                        },
+                                        display: "flex",
+                                        p: 0,
+                                        px: 1.5,
                                     }}
-                                    primary="products"
-                                />
-                                <Box flexGrow={1} />
+                                >
+                                    <ListItemText
+                                        sx={{
+                                            "& .MuiTypography-root": {
+                                                fontSize: "15px",
+                                                fontWeight: 300,
+                                            },
+                                        }}
+                                        primary="products"
+                                    />
+                                    <Box flexGrow={1} />
 
-                                <KeyboardArrowRightOutlined fontSize="small" />
-                            </ListItemButton>
+                                    <KeyboardArrowRightOutlined fontSize="small" />
+                                </ListItemButton>
 
-                            <Box
-                                className="sub-link"
-                                sx={{
-                                    display: "none",
+                                <Box
+                                    className="sub-link"
+                                    sx={{
+                                        display: "none",
 
-                                    position: "absolute",
-                                    top: 0,
-                                    left: "100%",
-                                }}
-                            >
-                                /.</Box>
-                            )
-};        
+                                        position: "absolute",
+                                        top: 0,
+                                        left: "100%",
+                                    }}
+                                >
+                                    <Paper sx={{ ml: 1, minWidth: 150 }}>
+                                        <nav aria-label="secondary mailbox folders">
+                                            <List>
+                                                <ListItem disablePadding>
+                                                    <ListItemButton
+                                                        sx={{
+                                                            display: "flex",
+                                                            p: 0,
+                                                            px: 1.5,
+                                                        }}
+                                                    >
+                                                        <ListItemText
+                                                            sx={{
+                                                                "& .MuiTypography-root": {
+                                                                    fontSize: "15px",
+                                                                    fontWeight: 300,
+                                                                },
+                                                            }}
+                                                            primary="Add Product"
+                                                        />
+                                                        <Box flexGrow={1} />
+                                                    </ListItemButton>
+                                                </ListItem>
+
+                                                <ListItem disablePadding>
+                                                    <ListItemButton
+                                                        sx={{
+                                                            display: "flex",
+                                                            p: 0,
+                                                            px: 1.5,
+                                                        }}
+                                                    >
+                                                        <ListItemText
+                                                            sx={{
+                                                                "& .MuiTypography-root": {
+                                                                    fontSize: "15px",
+                                                                    fontWeight: 300,
+                                                                },
+                                                            }}
+                                                            primary="Edit Product"
+                                                        />
+                                                        <Box flexGrow={1} />
+                                                    </ListItemButton>
+                                                </ListItem>
+                                            </List>
+                                        </nav>
+                                    </Paper>
+                                </Box>
+                            </ListItem>
+
+                            <ListItem disablePadding>
+                                <ListItemButton
+                                    sx={{
+                                        display: "flex",
+                                        p: 0,
+                                        px: 1.5,
+                                    }}
+                                >
+                                    <ListItemText
+                                        sx={{
+                                            "& .MuiTypography-root": {
+                                                fontSize: "15px",
+                                                fontWeight: 300,
+                                            },
+                                        }}
+                                        primary="orders"
+                                    />
+                                    <Box flexGrow={1} />
+                                </ListItemButton>
+                            </ListItem>
+
+                            <ListItem disablePadding>
+                                <ListItemButton
+                                    sx={{
+                                        display: "flex",
+                                        p: 0,
+                                        px: 1.5,
+                                    }}
+                                >
+                                    <ListItemText
+                                        sx={{
+                                            "& .MuiTypography-root": {
+                                                fontSize: "15px",
+                                                fontWeight: 300,
+                                            },
+                                        }}
+                                        primary="Profile"
+                                    />
+                                    <Box flexGrow={1} />
+                                </ListItemButton>
+                            </ListItem>
+                        </List>
+                    </nav>
+                </Paper>
+            </Box>
+        </Box>
+    );
+};
+
+export default Links;
