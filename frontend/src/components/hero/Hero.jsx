@@ -101,7 +101,67 @@ const Hero = () => {
                     Get Free Shipping on orders over $99.00
                   </Typography>
 
-    </container>
-  )
-}
+                  <Button
+                    sx={{
+                      px: 5,
+                      py: 1,
+                      mt: 2,
+                      backgroundColor: "#222",
+                      boxShadow: "0px 4px 16px rgba(43, 52, 69, 0.1)",
+                      color: "#fff",
+                      borderRadius: "1px",
+                      "&:hover": {
+                        bgcolor: "#151515",
+                        boxShadow: "0px 4px 16px rgba(43, 52, 69, 0.1)",
+                      },
+                    }}
+                    variant="contained"
+                  >
+                    shop now
+                  </Button>
+                </Box>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+
+        <Box sx={{ display: { xs: "none", md: "block", minWidth: "26.6%" } }}>
+          <Box sx={{ position: "relative" }}>
+            <img width={"100%"} src=".//images/banner-17.jpg" alt="" />
+
+            <Stack
+              sx={{
+                position: "absolute",
+                top: "50%",
+                transform: "translateY(-50%)",
+                left: 31,
+              }}
+            >
+              <Typography
+                variant="caption"
+                sx={{
+                  color: "#2B3445",
+                  fontSize: "18px",
+                }}
+              >
+                NEW ARRIVALS
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#2B3445",
+                  lineHeight: "16px",
+                  mt: 1,
+                }}
+              >
+                SUMMER
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#2B3445",
+                }}
+              >
+                SALE 20% OFF
+              </Typography>
 export default Hero;
