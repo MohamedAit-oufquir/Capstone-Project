@@ -50,7 +50,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-  const StyledBadge = styled(Badge)(({ theme }) => ({
+const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,
     top: 13,
@@ -76,6 +76,35 @@ const Header2 = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const theme = useTheme();
+
+  return (
+    <Container sx={{ my: 3, display: "flex", justifyContent: "space-between" }}>
+      <Stack alignItems={"center"}>
+        <ShoppingCartOutlined />
+        <Typography variant="body2">E-commerce</Typography>
+      </Stack>
+
+      <Search
+        sx={{
+          display: "flex",
+          borderRadius: "22px",
+          justifyContent: "space-between",
+        }}
+      >
+        <SearchIconWrapper>
+          <SearchIcon />
+        </SearchIconWrapper>
+        <StyledInputBase
+          placeholder="Search…"
+          inputProps={{ "aria-label": "search" }}
+        />
+      </>
+    </>
+/>
+
+
+
 export default Header2;
 
 
