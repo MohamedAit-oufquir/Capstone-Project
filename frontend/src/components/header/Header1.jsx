@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { ColorModeContext } from "../../theme";
 import { IconButton, useTheme } from "@mui/material";
 import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
-
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Header1 = () => {
     const colorMode = useContext(ColorModeContext);
@@ -46,8 +48,6 @@ const Header1 = () => {
                     </Typography>
 
                     <Box flexGrow={1} />
-
-
 
 
 
