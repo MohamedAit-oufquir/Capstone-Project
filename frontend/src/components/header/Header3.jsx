@@ -19,43 +19,42 @@ const Header3 = () => {
 
     const theme = useTheme()
 
-
-
-
-
-
-
-
-
-
-
     return (
-        <Container>
-            <Buttom
-             id="basic-button"
-                 aria-controls={open ? "basic-menu" : undefined}
+        <Container
+            sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyCuntent: "space-between",
+            }}>
+            <IconButtom
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
-                sx={width:222,bgcolor:theme.palette.myColor.main,color:  theme.palette.text.secondary}
+                sx={{
+                    width: 222,
+                    // @ts-ignore
+                    bgcolor: theme.palette.myColor.main,
 
-
-                >
-            </Buttom>
+                    color: theme.palette.text.secondary,
+                }}
+            >
+            </IconButtom>
             <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            "aria-labelledby": 'basic-button'
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    "aria-labelledby": 'basic-button'
 
-          }}
-          >
-            <menuItem onClick={handleClose}>profile</menuItem>
-            <MenuItem onClick ={handleClose}>My Account</MenuItem>
-            <MenuItem onClick = {handleClose}>Logout</MenuItem>
-          </Menu>
+                }}
+            >
+                <menuItem onClick={handleClose}>profile</menuItem>
+                <MenuItem onClick={handleClose}>My Account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+            </Menu>
 
 
         </Container >
