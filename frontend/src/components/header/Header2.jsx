@@ -1,4 +1,13 @@
 import { ExpandMore, ShoppingCartOutlined } from "@mui/icons-material";
+import {
+  Badge,
+  Container,
+  IconButton,
+  InputBase,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled } from "@mui/material/styles";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
@@ -9,6 +18,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+
 const Search = styled("div")(({ theme }) => ({
   flexGrow: 0.4,
   position: "relative",
@@ -50,6 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,
@@ -57,8 +68,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     border: `2px solid ${theme.palette.background.paper}`,
     padding: "0 4px",
   },
-
 }));
+
 const options = ["All Categories", "CAR", "Clothes", "Electronics"];
 
 const Header2 = () => {
@@ -68,6 +79,7 @@ const Header2 = () => {
   const handleClickListItem = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleMenuItemClick = (event, index) => {
     setSelectedIndex(index);
     setAnchorEl(null);
@@ -76,6 +88,7 @@ const Header2 = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   const theme = useTheme();
 
   return (
@@ -99,6 +112,7 @@ const Header2 = () => {
           placeholder="Search…"
           inputProps={{ "aria-label": "search" }}
         />
+
         <div>
           <List
             component="nav"
@@ -153,16 +167,21 @@ const Header2 = () => {
             ))}
           </Menu>
         </div>
+      </Search>
 
+      <Stack direction={"row"} alignItems={"center"}>
+        <IconButton aria-label="cart">
+          <StyledBadge badgeContent={4} color="primary">
+            <ShoppingCartIcon />
+          </StyledBadge>
+        </IconButton>
 
+        <IconButton>
+          <Person2OutlinedIcon />
+        </IconButton>
+      </Stack>
+    </Container>
+  );
+};
 
-
-        export default Header2;
-
-
-
-
-
-
-
-
+export default Header2;
