@@ -41,6 +41,7 @@ const Header3 = () => {
                 }}
             >
             </IconButtom>
+            
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -55,23 +56,45 @@ const Header3 = () => {
                 <MenuItem onClick={handleClose}>My Account</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
             </Menu>
+              
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <ElectricBikeOutlined fontSize="small" />
+            </ListItemIcon>
+
+            <ListItemText>Bikes</ListItemText>
+          </MenuItem>
+
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <LaptopChromebookOutlined fontSize="small" />
+            </ListItemIcon>
+
+            <ListItemText>Electronics</ListItemText>
+          </MenuItem>
+
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <MenuBookOutlined fontSize="small" />
+            </ListItemIcon>
+
+            <ListItemText>Books</ListItemText>
+          </MenuItem>
+
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <SportsEsportsOutlined fontSize="small" />
+            </ListItemIcon>
+
+            <ListItemText>Games</ListItemText>
+          </MenuItem>
+        </Menu>
+      </Box>
 
 
-        </Container >
-    )
 
+</Container>        
 
-
-
-
-
-
-
-
-
-
-
-        
-    )
+)
 }
 export default Header3;
