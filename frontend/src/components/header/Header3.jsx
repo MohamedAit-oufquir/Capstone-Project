@@ -1,62 +1,121 @@
-import { Container } from "@muni/material";
+import {
+  Box,
+  Container,
+  Drawer,
+  IconButton,
+  ListItemIcon,
+  ListItemText,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import WindowIcon from "@mui/icons-material/Window";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
-import { useTheme } from "@mui/material";
-
-
+import {
+  SportsEsportsOutlined,
+  ElectricBikeOutlined,
+  LaptopChromebookOutlined,
+  MenuBookOutlined,
+  Close,
+} from "@mui/icons-material";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import Links from "./Links";
 
 const Header3 = () => {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const theme = useTheme();
+  const [state, setState] = useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
     }
 
-    const theme = useTheme()
+    setState({ ...state, [anchor]: open });
+  };
 
-    return (
-        <Container
+  return (
+    <Container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        mt: 5,
+      }}
+    >
+      <Box>
+        <Button
+          id="basic-button"
+          aria-controls={open ? "basic-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          onClick={handleClick}
+          sx={{
+            width: 222,
+            // @ts-ignore
+            bgcolor: theme.palette.myColor.main,
+
+            color: theme.palette.text.secondary,
+          }}
+        >
+          <WindowIcon />
+          <Typography
             sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyCuntent: "space-between",
-            }}>
-            <IconButtom
-                id="basic-button"
-                aria-controls={open ? "basic-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-                onClick={handleClick}
-                sx={{
-                    width: 222,
-                    // @ts-ignore
-                    bgcolor: theme.palette.myColor.main,
+              padding: "0",
+              textTransform: "capitalize",
+              mx: 1,
+            }}
+          >
+            Categories
+          </Typography>
+          <Box flexGrow={1} />
 
-                    color: theme.palette.text.secondary,
-                }}
-            >
-            </IconButtom>
-
-            <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                    "aria-labelledby": 'basic-button'
-
-                }}
-            >
-                <menuItem onClick={handleClose}>profile</menuItem>
-                <MenuItem onClick={handleClose}>My Account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
-            </Menu>
-              
+          <KeyboardArrowRightOutlinedIcon />
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+          sx={{
+            ".MuiPaper-root": {
+              width: 220,
+              // @ts-ignore
+              bgcolor: theme.palette.myColor.main,
+            },
+          }}
+        >
           <MenuItem onClick={handleClose}>
             <ListItemIcon>
               <ElectricBikeOutlined fontSize="small" />
@@ -107,6 +166,7 @@ const Header3 = () => {
           <MenuIcon />
         </IconButton>
       )}
+
       <Drawer
         anchor={"top"}
         open={state["top"]}
