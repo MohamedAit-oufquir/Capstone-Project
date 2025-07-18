@@ -41,7 +41,7 @@ const Header3 = () => {
                 }}
             >
             </IconButtom>
-            
+
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -90,6 +90,23 @@ const Header3 = () => {
           </MenuItem>
         </Menu>
       </Box>
+
+      {useMediaQuery("(min-width:1200px)") && (
+        <Stack gap={4} direction={"row"} alignItems={"center"}>
+          <Links title={"Home"} />
+          <Links title={"Mega Menu"} />
+          <Links title={"Full Screen Menu"} />
+          <Links title={"pages"} />
+          <Links title={"User Account"} />
+          <Links title={"Vendor Account"} />
+        </Stack>
+      )}
+
+      {useMediaQuery("(max-width:1200px)") && (
+        <IconButton onClick={toggleDrawer("top", true)}>
+          <MenuIcon />
+        </IconButton>
+      )}
 
 
 
