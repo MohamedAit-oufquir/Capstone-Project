@@ -19,8 +19,8 @@ import "./slider.css";
 import IconSection from "./IconSection";
 
 const mySlider = [
-  { text: "MEN", link: "./images/banner-15.jpg" },
-  { text: "WOMEN", link: ".//images/banner-25.jpg" },
+  { text: "MEN", link: "//frontend/src/image/banner-15.jpg" },
+  { text: "WOMEN", link: "//frontend/src/image/banner-25.jpg" },
 ];
 
 const Hero = () => {
@@ -41,7 +41,7 @@ const Hero = () => {
           {mySlider.map((item) => {
             return (
               <SwiperSlide key={item.link} className="parent-slider">
-                <img src={item.link} alt="" />
+                <img src="frontend\src\image\banner-15.jpg" alt="" />
                 <Box
                   sx={{
                     [theme.breakpoints.up("sm")]: {
@@ -127,7 +127,7 @@ const Hero = () => {
 
         <Box sx={{ display: { xs: "none", md: "block", minWidth: "26.6%" } }}>
           <Box sx={{ position: "relative" }}>
-            <img width={"100%"} src=".//images/banner-17.jpg" alt="" />
+            <img width={"100%"} src="frontend\src\image\banner-17.jpg" alt="" />
 
             <Stack
               sx={{
@@ -187,7 +187,7 @@ const Hero = () => {
           </Box>
 
           <Box sx={{ position: "relative" }}>
-            <img width={"100%"} src="./images/banner-16.jpg" alt="" />
+            <img width={"100%"} src="frontend\src\image\banner-16.jpg" alt="" />
             <Stack
               sx={{
                 position: "absolute",
@@ -255,3 +255,17 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
