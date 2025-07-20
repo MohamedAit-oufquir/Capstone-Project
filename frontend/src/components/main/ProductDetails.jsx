@@ -1,4 +1,5 @@
-
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
 import { AddShoppingCartOutlined } from "@mui/icons-material";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import ToggleButton from "@mui/material/ToggleButton";
@@ -98,8 +99,3 @@ const ProductDetails = ({ clickedProduct }) => {
 };
 
 export default ProductDetails;
-
-
-
-
-

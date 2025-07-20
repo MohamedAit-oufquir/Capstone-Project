@@ -1,4 +1,3 @@
-
 module.exports = [
   'strapi::errors',
   {
@@ -24,15 +23,3 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
-
-
-
-
-
-
-
-
-
-
-
-

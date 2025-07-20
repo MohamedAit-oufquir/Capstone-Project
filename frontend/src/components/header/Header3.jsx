@@ -244,7 +244,3 @@ const Header3 = () => {
 };
 
 export default Header3;
-
-
-
-

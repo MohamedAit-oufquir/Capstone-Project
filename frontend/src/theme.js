@@ -78,17 +78,3 @@ export const useMode = () => {
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
   return [theme, colorMode];
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
