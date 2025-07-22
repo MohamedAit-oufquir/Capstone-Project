@@ -24,7 +24,7 @@ const mySlider = [
 
 
   { text: "MEN", link: "https://thumbs.dreamstime.com/z/cool-rock-roll-man-wearing-leather-jacket-sunglasses-posing-studio-76767181.jpg?ct=jpeg" },
-  { text: "WOMEN", link: ".//images/banner-25.jpg" },
+  { text: "WOMEN", link: ".//images/banner-15.jpg" },
 
 
 ];
