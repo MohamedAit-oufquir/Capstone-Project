@@ -19,8 +19,14 @@ import "./slider.css";
 import IconSection from "./IconSection";
 
 const mySlider = [
-  { text: "MEN", link: "./images/banner-15.jpg" },
+  // { text: "MEN", link: "./images/banner-15.jpg" },
+  // { text: "WOMEN", link: ".//images/banner-25.jpg" },
+
+
+  { text: "MEN", link: "https://thumbs.dreamstime.com/z/cool-rock-roll-man-wearing-leather-jacket-sunglasses-posing-studio-76767181.jpg?ct=jpeg" },
   { text: "WOMEN", link: ".//images/banner-25.jpg" },
+
+
 ];
 
 const Hero = () => {
@@ -188,6 +194,8 @@ const Hero = () => {
 
           <Box sx={{ position: "relative" }}>
             <img width={"100%"} src="./images/banner-16.jpg" alt="" />
+            {/* <img width={"100%"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswziNvzZJnIWwTINrSoowOBdM_VHdLKH5zQ&s" alt="" /> */}
+
             <Stack
               sx={{
                 position: "absolute",
