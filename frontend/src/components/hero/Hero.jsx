@@ -129,7 +129,9 @@ const Hero = () => {
 
         <Box sx={{ display: { xs: "none", md: "block", minWidth: "26.6%" } }}>
           <Box sx={{ position: "relative" }}>
-            <img width={"100%"} src=".//images/banner-17.jpg" alt="" />
+            {/* <img width={"100%"} src=".//images/banner-17.jpg" alt="" /> */}
+            <img width={"100%"} src="http://t3.gstatic.com/images?q=tbn:ANd9GcTw9lUi5TJyU-13RbnQ1nvylYFqaBUztaWgsWrF6HwWm4yLkzN4KgjXNyuZ17z1deuCghkO_NUi" alt="" />
+
 
             <Stack
               sx={{
@@ -189,8 +191,11 @@ const Hero = () => {
           </Box>
 
           <Box sx={{ position: "relative" }}>
-            <img width={"100%"} src="./images/banner-16.jpg" alt="" />
-            {/* <img width={"100%"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswziNvzZJnIWwTINrSoowOBdM_VHdLKH5zQ&s" alt="" /> */}
+            {/* <img width={"100%"} src="./images/banner-16.jpg" alt="" /> */}
+            {/* <img width={"100%"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROr-4q2KwlaNq1Zs9rKJJ3SST8xkPSyEc9Zg&s" alt="" /> */}
+
+            <img width={"100%"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe8jtoLe3nnc0vXQ0nftvuOftUlK5I5gkPHFJsrt6n4rGcNwyiwhjwcnxI2yWIWRFpOi0&usqp=CAU" alt="" />
+
 
             <Stack
               sx={{
