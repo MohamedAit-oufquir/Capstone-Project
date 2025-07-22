@@ -1,4 +1,7 @@
-{
+import mongoose from "mongoose";
+
+const shopeSchema= new mongoose.Schema({
+
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
@@ -45,4 +48,8 @@
       "required": true
     }
   }
-}
+})
+ShopeSchema.index({collectionName:1})
+const Store = mongoose.model("store",ShopeSchema);
+
+export default Store ;
