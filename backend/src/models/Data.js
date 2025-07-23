@@ -1,10 +1,10 @@
 let productList = [
-    {
-        name: "iphone 16",
-        price: 500,
-        stock: 10000,
-        imageUrl: "https://www.visible.com/shop/assets/images/shop/iPhone_16_Pro_Max_DES_1.jpg"
-    },
+    // {
+    //     name: "iphone 16",
+    //     price: 500,
+    //     stock: 10000,
+    //     imageUrl: "https://www.cellcom.com/sites/default/files/styles/max_650x650/public/2024-09/iPhone_16_Ultramarine_1.jpg?itok=MtJrYMPh"
+    // },
 
     {
         name: "iphone 16 Pro ",
