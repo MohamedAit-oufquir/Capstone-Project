@@ -1,33 +1,32 @@
-//import
-import express from "express";
-import "dotenv/config";
-import connectDb from "./admin/app.example";
-import product from "../src/api/product/content-types/product/schema.js"
+// import necessary modules
+import express from 'express';
+import cors from 'cors';
+import 'dotenv/config';
+import connectdb from '../db.js';  // ensure your db.js exports 'connectdb'
+import productRouter from './api/product/routes/product.js'; // adjust the path depending on file location
 
-//  base url
-app.get("/",(req,res)=>{
-res.json("hey backend")
+// then use
+app.use('/api/products', productRouter);
+
+const app = express();
+const port = process.env.PORT;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use('/api/products', productRouter); // use '/api/products' route
+
+// Base URL
+app.get('/', (req, res) => {
+  res.json('hey backend');
 });
 
-//listenner
-
-app.listen(port, ()=>{
-  console.log(`server listing at ${port}`);
-  connectdb();
-
-
+// Start server
+app.listen(port, () => {
+  console.log(`Server listening at ${port}`);
+  connectdb(); // connect to database
 });
 
-
-
-'use strict';
-
-module.exports = {
-
-  register(/*{ strapi }*/) {},
-
-
-
-  bootstrap(/*{ strapi }*/) {},
-};
 
