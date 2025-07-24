@@ -1,0 +1,72 @@
+img {
+    width: 200px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.iphone {
+    display: flex;
+    text-align: bottom;
+    block-size: auto;
+    text-align: center;
+    margin-top: 10px;
+    grid-template-rows: auto auto auto;
+}
+.product-info{
+    margin-top:auto;
+}
+button{
+    margin-top: 10px;
+}
+
+/* Container for all products */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between products */
+  justify-content: center; /* Center products horizontally */
+}
+
+/* Individual product container */
+.product {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+  border: 1px solid #ccc; /* Optional: Add a border for better separation */
+  padding: 10px; /* Add padding inside the product */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Image styling */
+.product img {
+  width: 100%; /* Make the image responsive */
+  max-width: 200px; /* Limit the maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+/* Button styling */
+.product button {
+  padding: 8px 16px; /* Add padding to the button */
+  background-color: #007bff; /* Blue color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+.product button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+
+

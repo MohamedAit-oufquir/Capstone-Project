@@ -22,6 +22,7 @@ app.use('/api/products', productRouter); // use '/api/products' route
 
 // Base URL
 app.get('/', (req, res) => {
+  
   res.json('hey backend');
 });
 

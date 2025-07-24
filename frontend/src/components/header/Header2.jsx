@@ -18,6 +18,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import {useNavigate } from "react-router-dom"
 
 const Search = styled("div")(({ theme }) => ({
   flexGrow: 0.4,
@@ -64,6 +65,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,
+
     top: 13,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: "0 4px",
@@ -74,6 +76,7 @@ const options = ["All Categories", "CAR", "Clothes", "Electronics"];
 
 const Header2 = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const navigate = useNavigate()
   const [selectedIndex, setSelectedIndex] = useState(0);
   const open = Boolean(anchorEl);
   const handleClickListItem = (event) => {
@@ -160,7 +163,10 @@ const Header2 = () => {
                 sx={{ fontSize: "13px" }}
                 key={option}
                 selected={index === selectedIndex}
-                onClick={(event) => handleMenuItemClick(event, index)}
+                onClick={(event) => {
+                 handleMenuItemClick(event, index) 
+                 navigate('/'+ option)
+                }}
               >
                 {option}
               </MenuItem>

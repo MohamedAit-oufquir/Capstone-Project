@@ -18,7 +18,7 @@ const Footer = () => {
         variant="h6"
         sx={{ fontSize: 18 }}
       >
-        Designed and developed by
+        Designed and developed by:
         <Button
           sx={{
             mx: 0.5,
@@ -29,9 +29,9 @@ const Footer = () => {
           variant="text"
           color="primary"
         >
-          Ali Hassan
+          Mohamed Ait-Oufquir
         </Button>
-        ©2023
+        ©2025
       </Typography>
     </Box>
   );

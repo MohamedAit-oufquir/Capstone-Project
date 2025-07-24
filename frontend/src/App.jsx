@@ -7,6 +7,9 @@ import Hero from "./components/hero/Hero";
 import Main from "./components/main/main";
 import Footer from "./components/footer/footer";
 import ScrollToTop from "./components/scroll/ScrollToTop";
+import { Routes, Route } from "react-router-dom";
+import Electronics from "./components/Electronics";
+
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -24,16 +27,25 @@ function App() {
         <Header1 />
         <Header2 />
         <Header3 />
+        <Routes>
+          <Route path='/' element={
+            <Box
+              bgcolor={
+                // @ts-ignore
+                theme.palette.bg.main
+              }
+            >
+              <Hero />
+              <Main />
 
-        <Box
-          bgcolor={
-            // @ts-ignore
-            theme.palette.bg.main
-          }
-        >
-          <Hero />
-          <Main />
-        </Box>
+            </Box>
+          } />
+          <Route path='/Electronics' element={<Electronics />} />
+
+        </Routes>
+
+
+
 
         <Footer />
 
@@ -44,3 +56,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
