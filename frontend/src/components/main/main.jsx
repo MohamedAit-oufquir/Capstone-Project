@@ -142,7 +142,7 @@ const Main = () => {
           flexWrap={"wrap"}
           justifyContent={"space-between"}
         >
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {data.data.map((item) => {
               return (
                 <Card
@@ -216,7 +216,7 @@ const Main = () => {
                 </Card>
               );
             })}
-          </AnimatePresence>
+          </AnimatePresence> */}
         </Stack>
 
         <Dialog

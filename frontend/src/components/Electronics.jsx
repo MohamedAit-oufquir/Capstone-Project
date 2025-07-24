@@ -7,7 +7,7 @@ export default function Electronics() {
 
   async function getData() {
     try {
-      const response = await fetch('http://localhost:3000/api/products')
+      const response = await fetch(import.meta.env.VITE_BASE_URL + '/api/products')
       const data = await response.json()
       setElectronics(data)
     } catch (e) {
