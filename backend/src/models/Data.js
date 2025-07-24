@@ -155,8 +155,8 @@ let productList = [
         price: 350,
         stock: 11000,
         image: "https://photos5.appleinsider.com/gallery/62563-129719-61935-128267-iPhone-SE-4-camera-xl-xl.jpg"
-    }
-    ,
+    },
+    
 
 
 ]
